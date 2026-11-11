@@ -10,6 +10,7 @@ Personal portfolio / landing page for tech networking and Cloud & DevOps service
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── .github/workflows/deploy-pages.yml
 └── assets/
     ├── favicon.ico
     ├── css/styles.css
@@ -19,6 +20,14 @@ Personal portfolio / landing page for tech networking and Cloud & DevOps service
         ├── guilherme-silva-pt-br.pdf
         └── guilherme-silva-en.pdf
 ```
+
+## Deploy (GitHub Pages)
+
+Deploy automático via GitHub Actions em todo push na `main`.
+
+1. Settings → Pages → Source: **GitHub Actions**
+2. Commit/push o workflow (ou rode **Actions** → Deploy GitHub Pages → **Run workflow**)
+3. Site: https://deployments-stacks.github.io/digital-presence/
 
 ## Stack
 
