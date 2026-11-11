@@ -1,46 +1,302 @@
- <!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="octacat-icon.ico" type="image/x-icon">
-    <meta name="description" content="Landing page desenvolvida para informações iniciais sobre mim.">
-    <title>Landing Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Guilherme Silva — Cloud & DevOps Engineer. IaC, CI/CD e automação. 2x AWS Certified. Conecte-se ou fale sobre serviços." />
+  <meta name="author" content="Guilherme Silva" />
+  <meta property="og:title" content="Guilherme Silva · DevOps" />
+  <meta property="og:description" content="Infra versionada, reproduzível e pronta para escalar. Open to connect." />
+  <meta property="og:type" content="website" />
+  <title>Guilherme Silva · DevOps</title>
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-    <header class="cabecalho">
-        <img class="cabecalho-img" src="logo-github.svg" alt="logo octacat do meu github">
-        <nav class="cabecalho-menu">
-        <a class="cabecalho-menu-item" href="index.html">Inicio</a>
-        <a class="cabecalho-menu-item" href="javascript:alert('EM BREVE.')">Projetos</a>
-        <a class="cabecalho-menu-item" href="javascript:alert('dailva.guilherme.582@gmail.com');" target="_self">Contato</a>  
-        </nav>
-    </header>   
-    <main class="conteudo">
-        <section class="conteudo-principal">
-            <div class="conteudo-principal-escrito">
-                <h1 class="conteudo-principal-escrito-titulo">É novo por aqui?</h1>
-                <h2 class="conteudo-principal-escrito-subtitulo">Seja muito bem vindo a minha rede, para me conhecer um pouco mais, separei alguns links.</h2>
-                <button class="conteudo-principal-escrito-botao" ><a href="https://github.com/dasilvaguilherme" target="_blank" rel="external">Github</a></button>
-                <button class="conteudo-principal-escrito-botao" ><a href="https://www.linkedin.com/in/guilhermesilva582/" target="_blank" rel="external">Linkedin</a></button>
-                <button class="conteudo-principal-escrito-botao" ><a href="https://www.instagram.com/opsguiihsilva_" target="_blank" rel="external">Instagram</a></button>
-                <button class="conteudo-principal-escrito-botao" ><a href="GUILHERME-SILVA.pdf" dowload="guilhermes-silva.pdf" type="application/pdf" Target="_blank" rel="external">Currículo</a></button>
-            </div>
-            <img class="conteudo-secundario-imagem" src="chale.svg" alt="chalezinho">
-        </section>
-        <section class="conteudo-secundario">
-            
-            <h3 class="conteudo-secundario-titulo">Quem sou eu</h3>
-            <p class="conteudo-secundario-paragrafo">Meu nome é Guilherme Augusto da Silva, só Guilherme Silva ja basta. Sou ex estudante da Unip, no curso: Analise e Desenvolvimento de Sistemas.</p>
-            
-            
-        </section>   
-    </main>
-</body>
-<footer class="rodape">
-    <p class="rodape-paragrafo">Site Desenvolvido por <strong class="strong" >Guilherme Silva.</strong></p>
-</footer>
+  <a class="skip-link" href="#content" data-i18n="skip">Ir ao conteúdo</a>
 
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav" data-i18n-aria="nav.aria" aria-label="Principal">
+      <a href="#services" data-i18n="nav.services">Serviços</a>
+      <a href="#stack" data-i18n="nav.stack">Stack</a>
+      <a href="#experience" data-i18n="nav.experience">Experiência</a>
+      <a href="#contact" data-i18n="nav.contact">Contato</a>
+    </nav>
+
+    <div class="lang-switch" role="group" aria-label="Idioma">
+      <button type="button" class="lang-btn" data-lang-option="pt-BR" aria-pressed="true">PT</button>
+      <button type="button" class="lang-btn" data-lang-option="en" aria-pressed="false">EN</button>
+    </div>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-mobile" data-i18n-aria="nav.open" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <nav id="nav-mobile" class="nav-mobile" hidden>
+    <a href="#services" data-i18n="nav.services">Serviços</a>
+    <a href="#stack" data-i18n="nav.stack">Stack</a>
+    <a href="#experience" data-i18n="nav.experience">Experiência</a>
+    <a href="#contact" data-i18n="nav.contact">Contato</a>
+  </nav>
+
+  <main id="content">
+    <section id="top" class="hero">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb--a"></div>
+        <div class="hero-orb hero-orb--b"></div>
+        <pre class="hero-terminal" id="hero-terminal" aria-hidden="true"><span class="t-output"></span><span class="t-cursor">▌</span></pre>
+      </div>
+
+      <div class="hero-copy">
+        <p class="brand hero-in">Guilherme Silva</p>
+        <h1 class="headline hero-in" data-delay="1" data-i18n-html="hero.headline">Infra versionada.<br />Entrega previsível.</h1>
+        <p class="lede hero-in" data-delay="2" data-i18n="hero.lede">
+          Cloud &amp; DevOps Engineer · 2x AWS Certified. Aberto a conectar — e a apoiar times com cloud, IaC, CI/CD e automação.
+        </p>
+        <div class="cta-group hero-in" data-delay="3">
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.ctaConnect">Conectar</a>
+          <a class="btn btn-ghost" href="#services" data-i18n="hero.ctaServices">Serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section about">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-i18n="about.eyebrow">sobre</p>
+        <h2 class="section-title reveal" data-i18n="about.title">Open to connect</h2>
+        <ul class="badge-row reveal" data-i18n-aria="about.badges" aria-label="Destaques">
+          <li>AWS 2x Certified</li>
+          <li data-i18n="about.badgeRole">Role DevOps</li>
+          <li data-i18n="about.badgeFocus">Focus IaC | CI/CD | Automation</li>
+        </ul>
+        <p class="section-lede reveal" data-i18n-html="about.lede">
+          Trabalho com <strong>AWS</strong>, <strong>Terraform</strong>, <strong>Docker</strong>, <strong>Linux</strong> e <strong>Python</strong> —
+          pipelines de CI/CD, automação de deploys e integração de serviços. Objetivo simples: infra
+          <em>versionada</em>, <em>reproduzível</em> e pronta para escalar.
+        </p>
+        <p class="mission reveal" data-i18n-html="about.mission"><code>mission</code> → automatizar · simplificar · build infra ready to scale</p>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-i18n="services.eyebrow">serviços</p>
+        <h2 class="section-title reveal" data-i18n="services.title">Onde posso ajudar</h2>
+        <p class="section-lede reveal" data-i18n="services.lede">
+          Para times e pessoas da bolha tech que precisam de nuvem estável, entrega contínua ou alguém para conversar sobre arquitetura.
+        </p>
+
+        <ul class="service-list">
+          <li class="reveal">
+            <span class="service-key">cloud/architecture</span>
+            <span class="service-desc" data-i18n="services.cloud">Soluções AWS com disponibilidade e eficiência de custo</span>
+          </li>
+          <li class="reveal" data-delay="1">
+            <span class="service-key">devops/iac</span>
+            <span class="service-desc" data-i18n="services.iac">Terraform, infra como código e ambientes reproduzíveis</span>
+          </li>
+          <li class="reveal" data-delay="2">
+            <span class="service-key">cicd/containers</span>
+            <span class="service-desc" data-i18n="services.cicd">Pipelines + Docker para entrega contínua</span>
+          </li>
+          <li class="reveal" data-delay="3">
+            <span class="service-key">ops/automation</span>
+            <span class="service-desc" data-i18n="services.automation">Menos processo manual, mais fluxo previsível e integração via API</span>
+          </li>
+          <li class="reveal">
+            <span class="service-key">linux/platform</span>
+            <span class="service-desc" data-i18n="services.linux">Servidores e ambientes Linux estáveis e bem operados</span>
+          </li>
+          <li class="reveal" data-delay="1">
+            <span class="service-key">api/integration</span>
+            <span class="service-desc" data-i18n="services.api">Integração de serviços e automações via API</span>
+          </li>
+          <li class="reveal" data-delay="2">
+            <span class="service-key">docs/enablement</span>
+            <span class="service-desc" data-i18n="services.enablement">Documentação, handoff e suporte às squads</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="stack" class="section stack">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-i18n="stack.eyebrow">skill set</p>
+        <h2 class="section-title reveal" data-i18n="stack.title">Stack do dia a dia</h2>
+        <p class="section-lede reveal" data-i18n="stack.lede">Stack diário + ferramentas — cloud, entrega e automação.</p>
+
+        <div class="stack-grid">
+          <div class="stack-group reveal">
+            <h3>Cloud</h3>
+            <ul class="skill-chips">
+              <li>AWS</li>
+              <li>GCP</li>
+              <li>Azure</li>
+              <li>Terraform</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal" data-delay="1">
+            <h3>DevOps</h3>
+            <ul class="skill-chips">
+              <li>Docker</li>
+              <li>Linux</li>
+              <li>Bash</li>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal" data-delay="2">
+            <h3 data-i18n="stack.languages">Languages &amp; Web</h3>
+            <ul class="skill-chips">
+              <li>Python</li>
+              <li>Node</li>
+              <li>React</li>
+              <li>Java</li>
+              <li>JS</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal" data-delay="3">
+            <h3>Databases</h3>
+            <ul class="skill-chips">
+              <li>Postgres</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>Supabase</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal" data-delay="4">
+            <h3>Tools</h3>
+            <ul class="skill-chips">
+              <li>VS Code</li>
+              <li>Vercel</li>
+              <li>Discord</li>
+            </ul>
+          </div>
+          <div class="stack-group reveal" data-delay="4">
+            <h3 data-i18n="stack.automation">Automação &amp; AI</h3>
+            <ul class="skill-chips">
+              <li>n8n</li>
+              <li>Cursor</li>
+              <li>Claude</li>
+              <li>Terminal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-i18n="exp.eyebrow">experiência</p>
+        <h2 class="section-title reveal" data-i18n="exp.title">Cloud &amp; DevOps Engineer</h2>
+        <p class="meta reveal" data-i18n="exp.meta">jul/2022 – atual</p>
+        <ul class="exp-list reveal">
+          <li data-i18n-html="exp.b1">Serviços de nuvem <strong>Amazon Web Services (AWS)</strong> e vivência em <strong>GCP</strong></li>
+          <li data-i18n-html="exp.b2">Gerenciamento de servidores e ambientes <strong>Linux</strong></li>
+          <li data-i18n-html="exp.b3">Automação de deploy com <strong>CI/CD</strong>, <strong>Docker</strong>, <strong>Terraform</strong> e <strong>Shell Script</strong></li>
+          <li data-i18n-html="exp.b4">Integração de serviços via <strong>API</strong>, versionamento com <strong>Git</strong>, documentação e suporte às squads</li>
+        </ul>
+        <p class="background reveal" data-i18n="exp.background">
+          Formação: ADS @ UNIP · Cloud @ Escola da Nuvem · AWS re/Start Graduate
+        </p>
+      </div>
+    </section>
+
+    <section id="certificacoes" class="section certs">
+      <div class="section-inner">
+        <p class="eyebrow reveal" data-i18n="certs.eyebrow">credenciais</p>
+        <h2 class="section-title reveal" data-i18n="certs.title">Certificações</h2>
+        <ul class="cert-list">
+          <li class="reveal">
+            <span class="cert-year">2025</span>
+            <span class="cert-name">AWS Certified Solutions Architect – Associate</span>
+            <span class="cert-issuer">Amazon Web Services</span>
+          </li>
+          <li class="reveal" data-delay="1">
+            <span class="cert-year">2024</span>
+            <span class="cert-name">AWS Certified Cloud Practitioner</span>
+            <span class="cert-issuer">Amazon Web Services</span>
+          </li>
+          <li class="reveal" data-delay="2">
+            <span class="cert-year">2024</span>
+            <span class="cert-name">AWS re/Start Graduate</span>
+            <span class="cert-issuer">Amazon Web Services</span>
+          </li>
+          <li class="reveal" data-delay="3">
+            <span class="cert-year">2024</span>
+            <span class="cert-name">Google Cloud Fundamentals: Core Infrastructure</span>
+            <span class="cert-issuer">Google</span>
+          </li>
+          <li class="reveal" data-delay="4">
+            <span class="cert-year">2024</span>
+            <span class="cert-name">Google Cloud IAM and Networking for AWS Professionals</span>
+            <span class="cert-issuer">Google</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="page-end">
+      <section id="contact" class="section contact">
+        <div class="section-inner contact-layout">
+          <div class="contact-intro">
+            <p class="eyebrow reveal" data-i18n="contact.eyebrow">contato</p>
+            <h2 class="section-title reveal" data-i18n="contact.title">Vamos conversar</h2>
+            <p class="section-lede reveal" data-i18n="contact.lede">
+              Networking na bolha tech, colaboração ou um projeto de cloud, IaC, CI/CD e automação — me chama.
+            </p>
+
+            <ul class="contact-topics reveal">
+              <li><span class="service-key">connect</span><span class="service-desc" data-i18n="contact.connect">Troca de ideias, networking e comunidades</span></li>
+              <li><span class="service-key">consulting</span><span class="service-desc" data-i18n="contact.consulting">Cloud, Terraform, pipelines e automação</span></li>
+              <li><span class="service-key">collab</span><span class="service-desc" data-i18n="contact.collab">Integração de serviços, APIs e entrega contínua</span></li>
+            </ul>
+          </div>
+
+          <div class="contact-panel reveal" data-delay="1">
+            <p class="cv-label" data-i18n="contact.channels">canais</p>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:dasilva.guilherme.582@gmail.com" data-i18n="contact.email">E-mail</a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/guilhermesilva582/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn btn-ghost" href="https://github.com/dasilvaguilherme" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <p class="contact-mail">
+              <a href="mailto:dasilva.guilherme.582@gmail.com">dasilva.guilherme.582@gmail.com</a>
+            </p>
+
+            <div class="cv-row">
+              <p class="cv-label" data-i18n="contact.cvLabel">Currículo</p>
+              <div class="cv-links">
+                <a id="cv-download" href="assets/cv/guilherme-silva-pt-br.pdf" download="guilherme-silva-pt-br.pdf">Baixar currículo</a>
+              </div>
+            </div>
+
+            <ul class="social-row">
+              <li><a href="https://www.youtube.com/channel/UCu4WpYrLAqHplvAtzDnflNw" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+              <li><a href="https://www.instagram.com/opsguiihsilva_/?hl=pt-br" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://www.twitch.tv/guihaugusto" target="_blank" rel="noopener noreferrer">Twitch</a></li>
+            </ul>
+
+            <p class="contact-status" data-i18n-html="contact.status"><code>status</code> → open to connect</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>© <span id="year"></span> <span data-i18n="footer.copy">Guilherme Silva · Cloud &amp; DevOps</span></p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
